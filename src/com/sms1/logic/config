@@ -1,0 +1,11 @@
+/**
+* Default 
+* Hostname: localhost:3306
+* username: root
+* password: 
+* database: tgs_sms1
+*/
+Hostname = localhost:3306
+username = adi_sptro
+password = 12345678
+database = tgs_sms1
