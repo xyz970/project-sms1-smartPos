@@ -76,7 +76,7 @@ public class AdminSetting extends javax.swing.JFrame {
         password_txt = new javax.swing.JPasswordField();
         show = new javax.swing.JToggleButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel3.setBackground(new java.awt.Color(48, 8, 136));
 

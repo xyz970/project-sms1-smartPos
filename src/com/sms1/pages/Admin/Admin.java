@@ -7,6 +7,8 @@ package com.sms1.pages.Admin;
 
 import com.sms1.components.userPanel;
 import com.formdev.flatlaf.FlatLightLaf;
+import com.sms1.components.AdminSetting;
+import com.sms1.components.KasirSetting;
 import com.sms1.components.Login;
 import com.sms1.logic.Config;
 import com.sms1.logic.MyFunction;
@@ -539,8 +541,8 @@ public class Admin extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(52, 52, 52)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(cariBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cariBarang, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel1))
                             .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -997,9 +999,19 @@ public class Admin extends javax.swing.JFrame {
         jMenu4.setText("Settings");
 
         jMenuItem1.setText("Admin");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem1);
 
         jMenuItem2.setText("Kasir");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem2);
 
         jMenuBar1.add(jMenu4);
@@ -1306,6 +1318,20 @@ public class Admin extends javax.swing.JFrame {
         clearInputSupplier();
         kodeSupplier_txt.setEditable(true);
     }//GEN-LAST:event_clearSupplierActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        AdminSetting adminSetting = new AdminSetting();
+        adminSetting.setTitle("Pengaturan Admin");
+        adminSetting.setLocationRelativeTo(null);
+        adminSetting.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        KasirSetting kasirSetting = new KasirSetting();
+        kasirSetting.setTitle("Pengaturan Kasir");
+        kasirSetting.setLocationRelativeTo(null);
+        kasirSetting.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     public String getPrimaryData() {
         int selectedData = DataBarang.getSelectedRow();
